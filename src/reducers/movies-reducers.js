@@ -1,4 +1,4 @@
-import { GET_MOVIES, GET_GENRES } from '../actions/actionsType';
+import { GET_MOVIES, GET_GENRES, GET_MOVIES_BY_GENRE } from '../actions/actionsType';
 const initialState = {
     genres: [],
     loading: false,
@@ -23,7 +23,7 @@ export default (state=initialState, action={}) => {
             };
         }
 
-        case `${GET_GENRES}_READY`: {
+        case `${GET_GENRES}_FULFILLED`: {
             return {
                 ...state,
                 loading: false,
@@ -49,6 +49,25 @@ export default (state=initialState, action={}) => {
                 totalResults: action.payload.data.total_results,
                 genreId: 0
             };
+        }
+
+        case `${GET_MOVIES_BY_GENRE}_PENDING`: {
+            return {
+                ...state,
+                loading: true,
+            }
+        }
+
+        case `${GET_MOVIES_BY_GENRE}_FULFILLED`: {
+            return {
+                ...state,
+                loading: false,
+                movies: action.payload.data.results,
+                page: action.payload.data.page,
+                totalPages: action.payload.data.total_pages,
+                totalResults: action.payload.data.total_results,
+                genreId: action.payload.data.id,
+            }
         }
 
         default: {

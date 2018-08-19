@@ -15,7 +15,7 @@ const Movie = ({ movie, loading, hideSummary }) => {
 
     return (
         <Card>
-            <CardImg top src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.post_path}`}
+            <CardImg top src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`}
             alt={movie.original_title} onError={onErrorImage} className="movie__card-post">
             </CardImg>
             <h1 className="movie__card-rating">10</h1>
