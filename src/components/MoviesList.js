@@ -2,7 +2,7 @@ import React from 'react'
 import ContentLoader from 'react-content-loader';
 import Movie from './Movie';
 
-const MovieList = ({ movies, loading, hideSummary = false, itemsPerRow = 4}) => {
+const MovieList = ({ movies, loading, hideSummary = false}) => {
     const MovieLoader = (
         <ContentLoader height={475} width={400} speed={10}>
             <rect x="1" y="-6" rx="0" ry="0" width="400" height="312" />

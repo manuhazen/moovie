@@ -32,7 +32,7 @@ export class ActorsPage extends Component {
 
         <div className="col-md-12 movie__list">
           <h1 className="text-center h3 movie__list-title">Movies</h1>
-          // MoviesCardList Here
+          MoviesCardList Here
         </div>
       </div>
     )

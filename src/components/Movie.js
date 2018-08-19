@@ -21,7 +21,7 @@ const Movie = ({ movie, loading, hideSummary }) => {
             <h1 className="movie__card-rating">10</h1>
             <CardBody className="movie__card-body">
                 <CardTitle className="movie__card-title">
-                    <NavLink to="/">
+                    <NavLink to={`/movies/${movie.id}`}>
                         {movie.original_title}
                     </NavLink>
                 </CardTitle>

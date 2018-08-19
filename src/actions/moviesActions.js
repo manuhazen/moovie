@@ -23,7 +23,7 @@ export function getMoviesByGenre(page=1, genreId) {
     return dispatch => {
         dispatch({
             type: GET_MOVIES_BY_GENRE,
-            payload: axios.get(`https://api.themoviedb.org/3/genre/${genreId}/movies?api_key=fed69657ba4cc6e1078d2a6a95f51c8c&page=${page}&language=en-US&include_adult=false&sort_by=created_at.asc`),
+            payload: axios.get(`https://api.themoviedb.org/3/genre/${genreId}/movies?api_key=ce2568d6a4fed20536b4e55364bee6e3&page=${page}&language=en-US&include_adult=true&sort_by=created_at.asc`),
             genreId
         });
     }
