@@ -21,9 +21,6 @@ export class Header extends Component {
               <li className="nav-item">
                 <NavLink className="nav-link" activeClassName="active" exact to="/upcoming">Coming Soon</NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" activeClassName="active" exact to="/series">TV Most Popular</NavLink>
-              </li>
             </ul>
           </div>
 
