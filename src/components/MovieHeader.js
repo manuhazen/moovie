@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Rating from 'react-rating';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Modal, ModalHeader, ModalBody} from 'reactstrap';
 import ReactPlayer from 'react-player';
 
 import Label from './Labels';
@@ -53,7 +53,7 @@ export class MovieHeader extends Component {
                 </div>
 
                 <div className="col-md-3">
-                    <img src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`} className="img-responsive"/>
+                    <img alt='' src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`} className="img-responsive"/>
                 </div>
             
                 <div className="col-md-8">
